@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 
 import "./style.css";
 
@@ -39,6 +38,16 @@ export default function Personagem() {
             <button onClick={(e) => removerPersonagem(p.name)}>Remover</button>
           </div>
         ))}
+        <div>
+          <select id="dropdown">
+            { personagens.map(p => (
+              <option value={p.name}>{p.name}</option>
+            ))}
+          </select>
+          <button onClick={e => removerPersonagem(document.getElementById("dropdown").value)}>
+            Remover
+          </button>
+        </div>
       </div>
     );
   }
