@@ -8,9 +8,20 @@ p {
   -webkit-text-shadow: 0 0 1px white;
 }
 
+#dropdown {
+  border-radius: 1px;
+  margin-bottom: 10px;
+}
+
 #personagens {
   display: grid;
   justify-content: center;
+}
+
+@media only screen and (max-width: 768px) { 
+ #personagens { 
+   justify-content: left !important;
+ }
 }
 
 .personagem {

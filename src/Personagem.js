@@ -30,14 +30,6 @@ export default function Personagem() {
     console.log(personagens);
     return (
       <div id="personagens">
-        { personagens.map(p => (
-          <div class="personagem">
-            <p style={{color: p.eye_color}}>
-              {p.name}
-            </p>
-            <button onClick={(e) => removerPersonagem(p.name)}>Remover</button>
-          </div>
-        ))}
         <div>
           <select id="dropdown">
             { personagens.map(p => (
@@ -48,6 +40,14 @@ export default function Personagem() {
             Remover
           </button>
         </div>
+        { personagens.map(p => (
+          <div class="personagem">
+            <p style={{color: p.eye_color}}>
+              {p.name}
+            </p>
+            <button onClick={(e) => removerPersonagem(p.name)}>Remover</button>
+          </div>
+        ))}
       </div>
     );
   }
